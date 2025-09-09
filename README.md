@@ -29,7 +29,7 @@ A modern, minimalist Progressive Web App (PWA) for tracking your TV shows, movie
 
 ## 🚀 Quick Start
 
-### Option 1: GitHub Pages (Recommended)
+### Option 1: GitHub Pages (Recommended) ( THIS IS ONLY FOR MOBILE SO IF YOU VIEW FROM PC USE YOU DEV MODE)
 Visit the live demo: **[Pop Watch Tracker](https://johnwikcke.github.io/Pop---Watch-Tracker)**
 
 ### Option 2: Android App 📱
