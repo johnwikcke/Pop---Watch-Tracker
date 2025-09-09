@@ -1,0 +1,115 @@
+{
+  "name": "Pop - Watch Tracker",
+  "short_name": "Pop",
+  "description": "Track your favorite TV shows, movies, anime, and web series",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#3f51b5",
+  "theme_color": "#3f51b5",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "productivity", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Main dashboard view"
+    },
+    {
+      "src": "screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Mobile view of show list"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Add Show",
+      "short_name": "Add",
+      "description": "Quickly add a new show to track",
+      "url": "./index.html?action=add",
+      "icons": [
+        {
+          "src": "icons/shortcut-add.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Stats",
+      "description": "View your watching statistics",
+      "url": "./index.html?action=dashboard",
+      "icons": [
+        {
+          "src": "icons/shortcut-dashboard.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.popwatchtracker",
+      "id": "com.popwatchtracker"
+    }
+  ],
+  "prefer_related_applications": false,
+  "scope": "./",
+  "id": "pop-watch-tracker"
+}

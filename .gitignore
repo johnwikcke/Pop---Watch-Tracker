@@ -1,0 +1,114 @@
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Android
+android/local.properties
+android/.gradle/
+android/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+android/app/build/
+android/app/release/
+android/app/debug/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Android Studio
+android/.idea/
+android/*.iml
+android/.gradle
+android/gradle/
+!android/gradle/wrapper/gradle-wrapper.jar
+
+# Signing files
+release/
+keystore.properties
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Service worker cache
+sw.js.map
+
+# PWA assets (if generated)
+manifest.json.backup
+
+# Test files
+test-results/
+coverage/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

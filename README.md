@@ -30,13 +30,25 @@ A modern, minimalist Progressive Web App (PWA) for tracking your TV shows, movie
 ## 🚀 Quick Start
 
 ### Option 1: GitHub Pages (Recommended)
-Visit the live demo: **[Pop Watch Tracker](https://yourusername.github.io/pop-watch-tracker)**
+Visit the live demo: **[Pop Watch Tracker](https://johnwikcke.github.io/Pop---Watch-Tracker)**
 
-### Option 2: Local Installation
+### Option 2: Android App 📱
+Get the native Android experience:
+
+1. **Download APK** (coming soon)
+2. **Build from source**:
+   ```bash
+   git clone https://github.com/johnwikcke/Pop---Watch-Tracker.git
+   cd Pop---Watch-Tracker/android
+   ./gradlew assembleDebug
+   ```
+3. **Quick setup**: See [ANDROID_SETUP.md](ANDROID_SETUP.md) for 5-minute setup guide
+
+### Option 3: Local Web Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/pop-watch-tracker.git
-   cd pop-watch-tracker
+   git clone https://github.com/johnwikcke/Pop---Watch-Tracker.git
+   cd Pop---Watch-Tracker
    ```
 
 2. **Open in browser**
@@ -53,7 +65,7 @@ Visit the live demo: **[Pop Watch Tracker](https://yourusername.github.io/pop-wa
 3. **Access the app**
    Open `http://localhost:8000` in your browser
 
-### Option 3: Install as PWA
+### Option 4: Install as PWA
 1. Visit the app in Chrome/Edge/Safari
 2. Look for the "Install" button in the address bar
 3. Click to install as a native app on your device
@@ -96,13 +108,13 @@ Visit the live demo: **[Pop Watch Tracker](https://yourusername.github.io/pop-wa
 - **CSS3**: Modern CSS with CSS Grid, Flexbox, and CSS Variables
 - **Vanilla JavaScript**: No frameworks - pure ES6+ JavaScript
 - **PWA Technologies**: Service Worker, Web App Manifest, Local Storage
+- **Android**: Native WebView wrapper for Android devices
 
-### Browser Support
-- ✅ Chrome 80+
-- ✅ Firefox 75+
-- ✅ Safari 13+
-- ✅ Edge 80+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+### Platform Support
+- ✅ Firefox 75sers**: Chrome 80+, Firefox 75+, Safari 13+, Edge 80+
+- ✅ **Mobile Web**:afari, Chrome Mobile, Samsung Internet
+- ✅ **Android**: Native Android app (API 21+, Android 5.0+)
+- ✅ **PWA**: Installable on all modern platforms
 
 ### Storage
 - **Local Storage**: All data stored locally in your browser
@@ -136,7 +148,7 @@ Visit the live demo: **[Pop Watch Tracker](https://yourusername.github.io/pop-wa
 We welcome contributions! Here's how you can help:
 
 ### Reporting Issues
-1. Check existing [issues](https://github.com/yourusername/pop-watch-tracker/issues)
+1. Check existing [issues](https://github.com/johnwikcke/pop-watch-tracker/issues)
 2. Create a new issue with:
    - Clear description of the problem
    - Steps to reproduce
@@ -153,7 +165,7 @@ We welcome contributions! Here's how you can help:
 ### Development Setup
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/pop-watch-tracker.git
+git clone https://github.com/johnwikcke/pop-watch-tracker.git
 cd pop-watch-tracker
 
 # Create a feature branch
@@ -179,10 +191,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Typography**: System font stack for optimal performance
 - **Color Palette**: Carefully chosen for accessibility and aesthetics
 
+## � Docpumentation
+
+### Development Guides
+- **[ANDROID_GUIDE.md](ANDROID_GUIDE.md)** - Complete Android development guide
+- **[ANDROID_SETUP.md](ANDROID_SETUP.md)** - Quick 5-minute Android setup
+
+### External Resources
+- [Android WebView Documentation](https://developer.android.com/guide/webapps/webview)
+- [PWA Documentation](https://web.dev/progressive-web-apps/)
+- [Google Play Console Help](https://support.google.com/googleplay/android-developer/)
+
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/pop-watch-tracker/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/pop-watch-tracker/discussions)
+- **Issues**: [GitHub Issues](https://github.com/johnwikcke/Pop---Watch-Tracker/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/johnwikcke/Pop---Watch-Tracker/discussions)
 - **Email**: saymynamejk0@gmail.com
 
 ## 🌟 Show Your Support
@@ -195,6 +218,6 @@ If you find this project helpful, please consider:
 
 ---
 
-**Made with ❤️ by [Your Name](https://github.com/yourusername)**
+**Made with ❤️ by [Non Popular Point](https://github.com/johnwikcke)**
 
 *Keep track of what you watch, discover what you love!* 🍿✨

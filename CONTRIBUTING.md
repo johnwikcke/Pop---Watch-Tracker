@@ -1,328 +1,279 @@
-# Contributing to Pop Watch Tracker 🤝
+# 🤝 Contributing to Pop Watch Tracker
 
 Thank you for your interest in contributing to Pop Watch Tracker! This document provides guidelines and information for contributors.
 
 ## 🌟 Ways to Contribute
 
-### 🐛 Bug Reports
-- Check [existing issues](https://github.com/yourusername/pop-watch-tracker/issues) first
-- Use the bug report template
-- Include browser/device information
-- Provide steps to reproduce
-
-### 💡 Feature Requests
-- Check if the feature already exists or is planned
-- Use the feature request template
-- Explain the use case and benefits
-- Consider implementation complexity
-
-### 📝 Code Contributions
-- Fork the repository
-- Create a feature branch
-- Follow coding standards
-- Test your changes thoroughly
-- Submit a pull request
-
-### 📚 Documentation
-- Improve README.md
-- Add code comments
-- Create tutorials or guides
-- Fix typos and grammar
+- 🐛 **Report bugs** - Help us identify and fix issues
+- 💡 **Suggest features** - Share ideas for new functionality
+- 📝 **Improve documentation** - Help make our docs clearer
+- 🔧 **Submit code** - Fix bugs or implement new features
+- 🎨 **Design improvements** - Enhance UI/UX
+- 📱 **Android development** - Improve the native Android app
+- 🧪 **Testing** - Help test on different devices and browsers
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Modern web browser (Chrome 80+, Firefox 75+, Safari 13+, Edge 80+)
-- Basic knowledge of HTML, CSS, and JavaScript
-- Git for version control
+- Git
+- Text editor or IDE
+- Web browser for testing
+- Android Studio (for Android development)
 
-### Development Setup
-```bash
-# 1. Fork the repository on GitHub
-# 2. Clone your fork locally
-git clone https://github.com/yourusername/pop-watch-tracker.git
-cd pop-watch-tracker
+### Setup Development Environment
 
-# 3. Create a feature branch
-git checkout -b feature/your-feature-name
+1. **Fork the repository**
+   ```bash
+   # Click "Fork" on GitHub, then clone your fork
+   git clone https://github.com/yourusername/pop-watch-tracker.git
+   cd pop-watch-tracker
+   ```
 
-# 4. Make your changes
-# Edit files using your preferred editor
+2. **Create a branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   # or
+   git checkout -b fix/bug-description
+   ```
 
-# 5. Test locally
-# Open index.html in your browser
-# Test on different screen sizes
-# Verify PWA functionality
+3. **Set up for web development**
+   ```bash
+   # Simple HTTP server for testing
+   python -m http.server 8000
+   # or
+   npx serve .
+   ```
 
-# 6. Commit your changes
-git add .
-git commit -m "feat: add your feature description"
+4. **Set up for Android development**
+   ```bash
+   # Copy web assets to Android project
+   cp index.html android/app/src/main/assets/
+   
+   # Open in Android Studio
+   # File → Open → select 'android' folder
+   ```
 
-# 7. Push to your fork
-git push origin feature/your-feature-name
-
-# 8. Create a Pull Request on GitHub
-```
-
-## 📋 Coding Standards
-
-### HTML
-- Use semantic HTML5 elements
-- Include proper ARIA labels for accessibility
-- Maintain proper indentation (2 spaces)
-- Use meaningful class and ID names
-
-### CSS
-- Follow BEM methodology for class naming
-- Use CSS custom properties (variables)
-- Mobile-first responsive design
-- Maintain consistent spacing and typography
-
-### JavaScript
-- Use ES6+ features
-- Follow functional programming principles
-- Add JSDoc comments for functions
-- Handle errors gracefully
-- Use meaningful variable names
+## 📋 Development Guidelines
 
 ### Code Style
-```javascript
-// ✅ Good
-function calculateProgress(show) {
-  if (!show || !show.seasons) return 0;
-  
-  const totalEpisodes = show.seasons.reduce((total, season) => {
-    return total + (season.episodes ? season.episodes.length : 0);
-  }, 0);
-  
-  const watchedEpisodes = show.seasons.reduce((total, season) => {
-    return total + (season.episodes ? season.episodes.filter(ep => ep.watched).length : 0);
-  }, 0);
-  
-  return totalEpisodes > 0 ? (watchedEpisodes / totalEpisodes) * 100 : 0;
-}
 
-// ❌ Avoid
-function calc(s) {
-  var t = 0, w = 0;
-  for(var i = 0; i < s.seasons.length; i++) {
-    t += s.seasons[i].episodes.length;
-    for(var j = 0; j < s.seasons[i].episodes.length; j++) {
-      if(s.seasons[i].episodes[j].watched) w++;
-    }
-  }
-  return t > 0 ? (w/t)*100 : 0;
-}
+#### HTML/CSS/JavaScript
+- Use 2 spaces for indentation
+- Use semantic HTML elements
+- Follow BEM methodology for CSS classes
+- Use modern JavaScript (ES6+)
+- Comment complex logic
+- Keep functions small and focused
+
+#### Android (Java)
+- Follow Android coding standards
+- Use meaningful variable names
+- Add JavaDoc comments for public methods
+- Handle exceptions appropriately
+- Follow Material Design guidelines
+
+### Commit Messages
+Use clear, descriptive commit messages:
+```
+feat: add episode bulk selection feature
+fix: resolve localStorage issue on Safari
+docs: update Android setup guide
+style: improve button hover animations
+refactor: simplify episode tracking logic
+test: add unit tests for data export
 ```
 
-## 🧪 Testing Guidelines
+### Branch Naming
+- `feature/feature-name` - New features
+- `fix/bug-description` - Bug fixes
+- `docs/documentation-update` - Documentation changes
+- `refactor/code-improvement` - Code refactoring
+- `test/test-addition` - Adding tests
 
-### Manual Testing Checklist
-- [ ] Test on multiple browsers (Chrome, Firefox, Safari, Edge)
-- [ ] Test responsive design (mobile, tablet, desktop)
-- [ ] Test PWA installation and offline functionality
-- [ ] Test accessibility with keyboard navigation
-- [ ] Test dark/light theme switching
-- [ ] Test data export/import functionality
-- [ ] Test all CRUD operations (Create, Read, Update, Delete)
+## 🐛 Reporting Issues
 
-### Testing New Features
-1. **Functionality**: Does the feature work as expected?
-2. **UI/UX**: Is the interface intuitive and accessible?
-3. **Performance**: Does it impact app performance?
-4. **Compatibility**: Works across supported browsers?
-5. **Data Integrity**: Doesn't corrupt existing data?
+### Bug Reports
+When reporting bugs, please include:
 
-## 📝 Commit Message Guidelines
+1. **Clear title** - Summarize the issue
+2. **Description** - Detailed explanation of the problem
+3. **Steps to reproduce** - How to recreate the issue
+4. **Expected behavior** - What should happen
+5. **Actual behavior** - What actually happens
+6. **Environment details**:
+   - Browser/version (for web issues)
+   - Android version/device (for Android issues)
+   - Operating system
+7. **Screenshots** - If applicable
+8. **Console errors** - Any error messages
 
-Use conventional commit format:
+### Feature Requests
+For new features, please include:
+
+1. **Clear title** - What feature you want
+2. **Problem description** - What problem does this solve?
+3. **Proposed solution** - How should it work?
+4. **Alternatives considered** - Other approaches you thought of
+5. **Additional context** - Screenshots, mockups, examples
+
+## 💻 Code Contribution Process
+
+### 1. Planning
+- Check existing issues and PRs to avoid duplicates
+- For major features, create an issue first to discuss
+- Break large features into smaller, manageable PRs
+
+### 2. Development
+- Write clean, readable code
+- Follow existing code patterns
+- Add comments for complex logic
+- Test your changes thoroughly
+
+### 3. Testing
+#### Web Testing
+- Test in multiple browsers (Chrome, Firefox, Safari, Edge)
+- Test on mobile devices
+- Test PWA installation
+- Verify offline functionality
+- Test data import/export
+
+#### Android Testing
+- Test on different Android versions (API 21+)
+- Test on different screen sizes
+- Test file upload functionality
+- Test WebView performance
+- Verify permissions work correctly
+
+### 4. Documentation
+- Update README.md if needed
+- Update relevant guide documents
+- Add inline code comments
+- Update version numbers if applicable
+
+### 5. Pull Request
+1. **Push your branch**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+2. **Create Pull Request**
+   - Use a clear, descriptive title
+   - Reference related issues (#123)
+   - Describe what you changed and why
+   - Include screenshots for UI changes
+   - List any breaking changes
+
+3. **PR Template**
+   ```markdown
+   ## Description
+   Brief description of changes
+   
+   ## Type of Change
+   - [ ] Bug fix
+   - [ ] New feature
+   - [ ] Documentation update
+   - [ ] Refactoring
+   
+   ## Testing
+   - [ ] Tested in Chrome
+   - [ ] Tested in Firefox
+   - [ ] Tested on mobile
+   - [ ] Tested Android app (if applicable)
+   
+   ## Screenshots
+   (if applicable)
+   
+   ## Related Issues
+   Fixes #123
+   ```
+
+## 🎯 Priority Areas
+
+We especially welcome contributions in these areas:
+
+### High Priority
+- 🐛 Bug fixes for reported issues
+- 📱 Android app improvements
+- ♿ Accessibility enhancements
+- 🌐 Internationalization (i18n)
+- 🔒 Security improvements
+
+### Medium Priority
+- 🎨 UI/UX improvements
+- ⚡ Performance optimizations
+- 📊 New analytics features
+- 🔄 Data sync capabilities
+- 🧪 Test coverage
+
+### Low Priority
+- 🎉 New themes
+- 🔌 Third-party integrations
+- 📈 Advanced statistics
+- 🎮 Gamification features
+
+## 🏗️ Project Structure
 
 ```
-type(scope): description
-
-[optional body]
-
-[optional footer]
+pop-watch-tracker/
+├── index.html              # Main web app
+├── README.md               # Project overview
+├── LICENSE                 # MIT license
+├── CONTRIBUTING.md         # This file
+├── ANDROID_GUIDE.md        # Android development guide
+├── ANDROID_SETUP.md        # Quick Android setup
+├── android/                # Android app source
+│   ├── app/
+│   │   ├── src/main/
+│   │   │   ├── java/       # Java source code
+│   │   │   ├── res/        # Android resources
+│   │   │   └── assets/     # Web assets
+│   │   └── build.gradle    # App build config
+│   ├── build.gradle        # Project build config
+│   └── settings.gradle     # Project settings
+└── docs/                   # Additional documentation
 ```
 
-### Types
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, etc.)
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
+## 🔄 Review Process
 
-### Examples
-```bash
-feat(episodes): add bulk episode marking functionality
-fix(search): resolve case-sensitive search issue
-docs(readme): update installation instructions
-style(css): improve button hover animations
-refactor(storage): optimize data persistence logic
-```
+1. **Automated checks** - GitHub Actions will run
+2. **Code review** - Maintainers will review your code
+3. **Testing** - Changes will be tested
+4. **Feedback** - You may receive requests for changes
+5. **Merge** - Approved PRs will be merged
 
-## 🔍 Pull Request Process
+## 🎉 Recognition
 
-### Before Submitting
-1. **Test thoroughly** on multiple browsers
-2. **Update documentation** if needed
-3. **Check for conflicts** with main branch
-4. **Follow coding standards**
-5. **Write clear commit messages**
-
-### PR Template
-```markdown
-## Description
-Brief description of changes
-
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Documentation update
-- [ ] Performance improvement
-- [ ] Code refactoring
-
-## Testing
-- [ ] Tested on Chrome
-- [ ] Tested on Firefox
-- [ ] Tested on mobile
-- [ ] Tested PWA functionality
-
-## Screenshots (if applicable)
-Add screenshots for UI changes
-
-## Additional Notes
-Any additional information or context
-```
-
-### Review Process
-1. **Automated checks** (if any) must pass
-2. **Code review** by maintainers
-3. **Testing** by reviewers
-4. **Approval** and merge
-
-## 🎯 Feature Development Guidelines
-
-### Planning New Features
-1. **Create an issue** first to discuss the feature
-2. **Consider user impact** and use cases
-3. **Plan implementation** approach
-4. **Consider accessibility** requirements
-5. **Think about mobile** experience
-
-### Implementation Best Practices
-- **Start small**: Implement MVP first
-- **Progressive enhancement**: Ensure basic functionality works everywhere
-- **Accessibility first**: Include ARIA labels and keyboard support
-- **Performance conscious**: Minimize impact on app performance
-- **Data backward compatibility**: Don't break existing user data
-
-## 🐛 Bug Fix Guidelines
-
-### Investigating Bugs
-1. **Reproduce the issue** consistently
-2. **Identify root cause** through debugging
-3. **Consider edge cases** and side effects
-4. **Test the fix** thoroughly
-5. **Verify no regression** in other features
-
-### Bug Fix Checklist
-- [ ] Issue reproduced and understood
-- [ ] Root cause identified
-- [ ] Fix implemented and tested
-- [ ] No regression in existing functionality
-- [ ] Edge cases considered
-- [ ] Documentation updated if needed
-
-## 📱 PWA Development Notes
-
-### Service Worker Updates
-- Test offline functionality
-- Verify cache invalidation
-- Test app updates and refresh
-
-### Manifest Changes
-- Validate manifest.json syntax
-- Test installation flow
-- Verify icons and metadata
-
-## 🎨 Design Guidelines
-
-### Visual Consistency
-- Follow existing design patterns
-- Use established color palette
-- Maintain consistent spacing
-- Follow typography hierarchy
-
-### Accessibility
-- Minimum contrast ratios (WCAG AA)
-- Keyboard navigation support
-- Screen reader compatibility
-- Touch target sizes (44px minimum)
+Contributors will be:
+- Listed in the README.md contributors section
+- Mentioned in release notes for significant contributions
+- Given credit in commit messages and PR descriptions
 
 ## 📞 Getting Help
 
-### Resources
-- **Documentation**: Check README.md and code comments
-- **Issues**: Search existing GitHub issues
-- **Discussions**: Use GitHub Discussions for questions
-- **Email**: Contact saymynamejk0@gmail.com for complex issues
+- **Questions**: Create a GitHub Discussion
+- **Stuck**: Comment on your PR or issue
+- **Ideas**: Start a Discussion thread
+- **Direct contact**: saymynamejk0@gmail.com
 
-### Communication
-- **Be respectful** and constructive
-- **Provide context** when asking questions
-- **Share relevant information** (browser, OS, steps taken)
-- **Be patient** - maintainers are volunteers
+## 📜 Code of Conduct
 
-## 🏆 Recognition
+### Our Pledge
+We pledge to make participation in our project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-Contributors will be recognized in:
-- README.md contributors section
-- Release notes for significant contributions
-- GitHub contributors graph
+### Our Standards
+- Use welcoming and inclusive language
+- Be respectful of differing viewpoints
+- Accept constructive criticism gracefully
+- Focus on what's best for the community
+- Show empathy towards other community members
 
-## 📋 Issue Templates
+### Enforcement
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting saymynamejk0@gmail.com.
 
-### Bug Report Template
-```markdown
-**Describe the bug**
-A clear description of what the bug is.
+## 🙏 Thank You
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Every contribution, no matter how small, helps make Pop Watch Tracker better for everyone. Thank you for taking the time to contribute!
 
-**Expected behavior**
-What you expected to happen.
+---
 
-**Screenshots**
-If applicable, add screenshots.
-
-**Environment:**
-- Browser: [e.g. Chrome 91]
-- OS: [e.g. Windows 10]
-- Device: [e.g. iPhone 12]
-- App Version: [e.g. 2.5.0]
-```
-
-### Feature Request Template
-```markdown
-**Is your feature request related to a problem?**
-A clear description of what the problem is.
-
-**Describe the solution you'd like**
-A clear description of what you want to happen.
-
-**Describe alternatives you've considered**
-Alternative solutions or features you've considered.
-
-**Additional context**
-Any other context or screenshots about the feature request.
-```
-
-Thank you for contributing to Pop Watch Tracker! 🍿✨
+**Happy coding! 🚀**
